@@ -21,17 +21,17 @@ console.log(getName());*/
 
 
 const store = configureStore();
-store.dispatch(addExpense({description: 'water bill', amount: 500}));
-store.dispatch(addExpense({description: 'current bill', createdAt: 10}));
-store.dispatch(addExpense({description: 'gas bill', amount: 1000}));
+// store.dispatch(addExpense({description: 'water bill', amount: 500}));
+// store.dispatch(addExpense({description: 'current bill', createdAt: 10}));
+// store.dispatch(addExpense({description: 'gas bill', amount: 1000}));
 /*store.dispatch(setTextFilter('water'));
 setTimeout( () => {
     store.dispatch(setTextFilter('bill'));
 }, 3000)*/
 
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
+// const state = store.getState();
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+// console.log(visibleExpenses);
 //console.log(store.getState());
 
 

@@ -21,6 +21,7 @@ console.log(getName());*/
 
 
 const store = configureStore();
+
 // store.dispatch(addExpense({description: 'water bill', amount: 500}));
 // store.dispatch(addExpense({description: 'current bill', createdAt: 10}));
 // store.dispatch(addExpense({description: 'gas bill', amount: 1000}));

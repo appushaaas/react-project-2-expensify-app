@@ -2,8 +2,8 @@
 
 
   import React from 'react';
-  import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
-  import ExpenseDashBoardPage from '../components/ExpenseDashBoardPage';
+  import { BrowserRouter, Route, Switch } from 'react-router-dom';
+  import ExpenseDashBoardPage from '../components/ExpenseDashboardPage';
   import AddExpensePage from '../components/AddExpensePage';
   import NotFound from '../components/NotFound';
   import Header from '../components/Header';
@@ -30,4 +30,3 @@ const AppRouter = () => (
 
 export default AppRouter;
 
-//<NavLink to = {"/expense/"+123}  activeClassName = "is-active">Expense</NavLink>

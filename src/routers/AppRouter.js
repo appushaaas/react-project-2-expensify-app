@@ -9,19 +9,19 @@
   import Header from '../components/Header';
   import EditExpensePage from '../components/EditExpensePage';
   import HelpPage from '../components/HelpPage';
-
+  import LoginPage from '../components/LoginPage';
 
 const AppRouter = () => (
 <BrowserRouter>
  <div>
    <Header />
    <Switch>
-    <Route path = "/" component = {ExpenseDashBoardPage} exact = {true}/>
+    <Route path = "/" component = {LoginPage} exact = {true}/>
+    <Route path = "/dashboard" component = {ExpenseDashBoardPage}/>
     <Route path = "/create" component = {AddExpensePage}/>
     <Route path = "/expense/:id" component = {EditExpensePage}/>
     <Route path = "/help" component = {HelpPage}/>
     <Route component = {NotFound}/>
-    <Route path = "/" component = {Header}/>
   </Switch>
  </div>
 </BrowserRouter>
@@ -30,3 +30,4 @@ const AppRouter = () => (
 
 export default AppRouter;
 
+//<Route path = "/" component = {Header}/>

@@ -24,6 +24,11 @@ switch(action.type)
          return expenses;
      };
     });
+    case 'SET_EXPENSES':
+    return action.expenses;
+
+   // case 'START_SET_EXPENSES':
+
     default:
     return state;
 }

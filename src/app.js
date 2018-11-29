@@ -11,6 +11,7 @@
   import './playground/promises';
   import 'normalize.css/normalize.css';
   import './styles/styles.scss';
+  import LoadingPage from './components/LoadingPage';
  
   /*const obj = {
     name : 'Andrew',
@@ -53,24 +54,24 @@ setTimeout( () => {
       }
   };
 
- ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 
-firebase.auth().onAuthStateChanged((user) => {
-   if(user){
-    store.dispatch(login(user.uid));
-    store.dispatch(startSetExpenses()).then(() => {
-    renderApp();
-    if(history.location.pathname === '/'){
-        history.push('/dashboard');
-    }
-    });
-}else{
+ firebase.auth().onAuthStateChanged((user) => {
+    if(user){
+     store.dispatch(login(user.uid));
+     store.dispatch(startSetExpenses()).then(() => {
+     renderApp();
+     if(history.location.pathname === '/'){
+         history.push('/dashboard');
+   }
+     });
+ }else{
     store.dispatch(logout());
-        renderApp();  
-       history.push('/');
-     }
-});
+         renderApp();  
+        history.push('/');
+      }
+ });
 
 
 /*class OldSyntax  {
